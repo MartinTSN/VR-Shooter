@@ -79,7 +79,7 @@ public class GunShoot : MonoBehaviour
         {
             ReloadGun();
         }
-        if (shootAction.GetState(SteamVR_Input_Sources.RightHand) ||Input.GetMouseButton(1))
+        if (shootAction.GetState(SteamVR_Input_Sources.RightHand))
         {
             Shoot();
         }
@@ -143,7 +143,19 @@ public class GunShoot : MonoBehaviour
     /// </summary>
     void ReloadGun()
     {
-        currentAmmo = maxAmmo;
-        currentAmmoText.text = currentAmmo.ToString();
+        if (IsAutomatic == true)
+        {
+            if (currentAmmo == 0)
+            {
+                currentAmmo = maxAmmo;
+                currentAmmoText.text = currentAmmo.ToString();
+            }
+        }
+        else
+        {
+            currentAmmo = maxAmmo;
+            currentAmmoText.text = currentAmmo.ToString();
+
+        }
     }
 }
