@@ -29,19 +29,11 @@ public class Laser : MonoBehaviour
 
         lr.SetPosition(0, new Vector3(transform.position.x, transform.position.y, transform.position.z));
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.position, out hit))
-        {
-            if (hit.collider)
-            {
-                if (hit.collider.tag != "MainCamera")
-                {
-                    lr.SetPosition(1, hit.point);
-                }
-            }
-        }
-        else
-        {
-            lr.SetPosition(1, transform.forward * 5000);
-        }
+        lr.SetPosition(1, transform.forward * 5000);
+    }
+
+    void LateUpdate()
+    {
+
     }
 }

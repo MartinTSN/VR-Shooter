@@ -12,6 +12,8 @@ TagManager:
   - Object
   - Enemy
   - GunHolder
+  - HandGunHolder
+  - UI
   layers:
   - Default
   - TransparentFX
