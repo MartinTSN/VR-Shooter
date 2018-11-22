@@ -113,8 +113,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1000
-  damage: 4
+  damage: 5.5
   bulletDespawnRate: 1.5
+  deathEffect: {fileID: 1348188884769602, guid: e86a9f650c0e37149886d22c18c8f305,
+    type: 2}
 --- !u!135 &135248350794307060
 SphereCollider:
   m_ObjectHideFlags: 1

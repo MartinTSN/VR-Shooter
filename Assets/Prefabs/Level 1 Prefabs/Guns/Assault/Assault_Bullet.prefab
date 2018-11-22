@@ -112,9 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b30624a09e1ee74cbb1f511518cf6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
-  damage: 2.5
+  speed: 450
+  damage: 3.5
   bulletDespawnRate: 4.59
+  deathEffect: {fileID: 1348188884769602, guid: e86a9f650c0e37149886d22c18c8f305,
+    type: 2}
 --- !u!135 &135750112366753422
 SphereCollider:
   m_ObjectHideFlags: 1

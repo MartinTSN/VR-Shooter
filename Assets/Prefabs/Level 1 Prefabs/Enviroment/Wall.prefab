@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4843462502653940}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -37,12 +37,12 @@ GameObject:
   - component: {fileID: 33571083345155536}
   - component: {fileID: 23744592475720686}
   - component: {fileID: 65258797016866332}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall part (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1437060531331874
 GameObject:
@@ -55,12 +55,12 @@ GameObject:
   - component: {fileID: 33929711645888070}
   - component: {fileID: 23320668266041298}
   - component: {fileID: 65218200304593048}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall part (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1494113905721816
 GameObject:
@@ -73,12 +73,12 @@ GameObject:
   - component: {fileID: 33714948750557532}
   - component: {fileID: 23662033801993594}
   - component: {fileID: 65406927824878928}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall part (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1788749089160978
 GameObject:
@@ -91,12 +91,12 @@ GameObject:
   - component: {fileID: 33326543874592098}
   - component: {fileID: 23385409722661632}
   - component: {fileID: 65890602796308092}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall part (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1830803914983830
 GameObject:
@@ -109,12 +109,12 @@ GameObject:
   - component: {fileID: 33928852058635476}
   - component: {fileID: 23016817868534044}
   - component: {fileID: 65025239647723498}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Window
   m_TagString: Wall
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4054308919447516
 Transform:
@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 1830803914983830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.19999999, y: 2, z: 13.3}
+  m_LocalScale: {x: 0.19999999, y: 2, z: 13.252}
   m_Children: []
   m_Father: {fileID: 4843462502653940}
   m_RootOrder: 4

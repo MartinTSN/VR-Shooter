@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114689782338413060}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: HandGunHolder
+  m_TagString: GunHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 114317119679679376}
   - component: {fileID: 65399075225509112}
   m_Layer: 0
-  m_Name: SciFiGunLightYellow
+  m_Name: AssaultGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,15 +140,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1267796408663254}
-  m_LocalRotation: {x: 0.1708359, y: 0.038066525, z: -0, w: 0.9845639}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.17227311, y: 0.06924348, z: 0.0034118989, w: 0.9826066}
+  m_LocalPosition: {x: -0.011, y: -0.003, z: -0.128}
+  m_LocalScale: {x: 1, y: 1, z: 0.67}
   m_Children:
   - {fileID: 4319603460137964}
   - {fileID: 224541513633836406}
   m_Father: {fileID: 4458760071226618}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 19.76, y: 8.386, z: 1.861}
 --- !u!4 &4319603460137964
 Transform:
   m_ObjectHideFlags: 1
@@ -169,7 +169,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162478155183982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.17, y: 2.99, z: -0.486}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4222456342513260}
@@ -361,7 +361,9 @@ MonoBehaviour:
   currentAmmoText: {fileID: 114947227064716502}
   maxAmmoText: {fileID: 114130047939735686}
   maxAmmo: 30
-  fireRate: 0.1
+  fireRate: 0.08
+  bulletSpeed: 450
+  bulletDamage: 3.5
   IsAutomatic: 1
 --- !u!114 &114379343328707582
 MonoBehaviour:
@@ -396,7 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
-  gameobject: {fileID: 1162478155183982}
+  changeAction: {fileID: 11400000, guid: e044967a645f81e42ab82442e16b5811, type: 2}
 --- !u!114 &114536001946996510
 MonoBehaviour:
   m_ObjectHideFlags: 1

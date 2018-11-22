@@ -66,16 +66,17 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        gameObject.tag = "Enemy";
         originalColor = skinMaterial.color;
 
         currentState = State.Chasing;
 
         myCollisionRadius = GetComponent<CapsuleCollider>().radius;
-        targetCollisionRadius = target.GetComponent<CapsuleCollider>().radius;
+        targetCollisionRadius = target.GetComponent<SphereCollider>().radius;
         StartCoroutine(UpdatePath());
     }
 
-    public void SetCharacteristics(float movespeed, int Damage, float Health, Transform Target)
+    public void SetCharacteristics(float movespeed, float Damage, float Health, Transform Target)
     {
         pathfinder.speed = movespeed;
         damage = Damage;
@@ -89,7 +90,7 @@ public class Enemy : MonoBehaviour
         skinMaterial = GetComponent<Renderer>().material;
 
         currentHealth = health;
-        healthBar = Instantiate(healthBarPrefab, transform.position + new Vector3(0, 1.25f, 0), Quaternion.identity, transform);
+        healthBar = Instantiate(healthBarPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity, transform);
         healthBar.transform.Rotate(90, 0, 0);
         healthBar.SetActive(false);
     }
@@ -161,7 +162,7 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            Destroy(Instantiate(deathEffect, gameObject.transform.position,Quaternion.identity), 1.5f);
+            Destroy(Instantiate(deathEffect, gameObject.transform.position, Quaternion.identity), 1.5f);
             dead = true;
             if (OnDeath != null)
             {

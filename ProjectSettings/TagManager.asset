@@ -7,11 +7,11 @@ TagManager:
   - FxTemporaire
   - projectile
   - Button
-  - HandGunHolder
   - Ground
   - Wall
   - Object
   - Enemy
+  - GunHolder
   layers:
   - Default
   - TransparentFX

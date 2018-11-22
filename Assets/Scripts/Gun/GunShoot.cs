@@ -52,11 +52,16 @@ public class GunShoot : MonoBehaviour
     /// <summary>
     /// How fast can the gun fire.
     /// </summary>
+    [Tooltip("Higher = Slower")]
     public float fireRate = 0.2f;
     /// <summary>
     /// Used to count down the fireRate.
     /// </summary>
     float fireCounter = 0f;
+
+    [Tooltip("Higher = Faster")]
+    public float bulletSpeed = 3f;
+    public float bulletDamage = 1;
 
     public bool IsAutomatic;
     float nextShotTime;
@@ -79,9 +84,19 @@ public class GunShoot : MonoBehaviour
         {
             ReloadGun();
         }
-        if (shootAction.GetState(SteamVR_Input_Sources.RightHand))
+        if (IsAutomatic == true)
         {
-            Shoot();
+            if (shootAction.GetState(SteamVR_Input_Sources.RightHand))
+            {
+                Shoot();
+            }
+        }
+        else
+        {
+            if (shootAction.GetStateDown(SteamVR_Input_Sources.RightHand))
+            {
+                Shoot();
+            }
         }
         TimeToShoot();
     }
@@ -102,7 +117,8 @@ public class GunShoot : MonoBehaviour
                 if (Time.time > nextShotTime)
                 {
                     nextShotTime = Time.time + fireRate;
-                    Instantiate(bulletPrefab, barrelExit.position, Quaternion.identity);
+                    GameObject bullet = Instantiate(bulletPrefab, barrelExit.position, Quaternion.identity);
+                    bullet.GetComponent<GunBullet>().SetCharacteristics(bulletSpeed, bulletDamage);
                     currentAmmo = currentAmmo - 1;
                     currentAmmoText.text = currentAmmo.ToString();
                 }
@@ -155,7 +171,12 @@ public class GunShoot : MonoBehaviour
         {
             currentAmmo = maxAmmo;
             currentAmmoText.text = currentAmmo.ToString();
-
         }
+    }
+
+    public void forceReloadGun()
+    {
+        currentAmmo = maxAmmo;
+        currentAmmoText.text = currentAmmo.ToString();
     }
 }

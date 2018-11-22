@@ -23,11 +23,13 @@ public class GunBullet : MonoBehaviour
     /// <summary>
     /// How long it takes for the bullet to despawn. 1f = 1 sec.
     /// </summary>
+    [Tooltip("1 = 1 second")]
     public float bulletDespawnRate = 4f;
     /// <summary>
     /// A tempoary rigidbody.
     /// </summary>
     Rigidbody tempBody;
+    public GameObject deathEffect;
 
     void Start()
     {
@@ -38,6 +40,12 @@ public class GunBullet : MonoBehaviour
     void Update()
     {
         Destroy(gameObject, bulletDespawnRate);
+    }
+
+    public void SetCharacteristics(float Speed, float Damage)
+    {
+        speed = Speed;
+        damage = Damage;
     }
 
     /// <summary>
@@ -67,14 +75,24 @@ public class GunBullet : MonoBehaviour
         GameObject obj = collision.gameObject;
         if (obj.tag == "Ground")
         {
+            Destroy(Instantiate(deathEffect, gameObject.transform.position, Quaternion.identity), 0.75f);
             Destroy(gameObject);
         }
         if (obj.tag == "Object")
         {
-            Destroy(gameObject);
+            if (obj.name == "Poplar_Tree")
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(Instantiate(deathEffect, gameObject.transform.position, Quaternion.identity), 0.75f);
+                Destroy(gameObject);
+            }
         }
         if (obj.tag == "Wall")
         {
+            Destroy(Instantiate(deathEffect, gameObject.transform.position, Quaternion.identity), 0.75f);
             Destroy(gameObject);
         }
     }

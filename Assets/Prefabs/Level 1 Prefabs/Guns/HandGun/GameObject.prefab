@@ -277,7 +277,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1621133557098288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.176, y: 3.3, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4681601810412808}
@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
-  gameobject: {fileID: 1621133557098288}
+  changeAction: {fileID: 11400000, guid: e044967a645f81e42ab82442e16b5811, type: 2}
 --- !u!114 &114063148498349778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -618,6 +618,9 @@ MonoBehaviour:
   maxAmmoText: {fileID: 114952101986781088}
   maxAmmo: 7
   fireRate: 0
+  bulletSpeed: 3
+  bulletDamage: 5.5
+  IsAutomatic: 0
 --- !u!114 &114143782092551930
 MonoBehaviour:
   m_ObjectHideFlags: 1
